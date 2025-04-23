@@ -1,0 +1,59 @@
+
+body {
+    background: url('https://static.vecteezy.com/system/resources/previews/015/278/060/original/trendy-soft-retro-gradient-background-design-minimalistic-soft-gradient-in-pastel-colors-elegant-soft-blur-texture-colorful-mesh-gradient-background-vector.jpg') no-repeat fixed;
+    background-size: cover;
+    background-position: center top;
+}
+
+
+.fancy_graphics {
+    width: 490px;
+    height: 325px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 10px;
+    box-shadow: 0px 0px 1px 1px var(--bs-gray-300);
+}
+
+#navvv {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1030;
+    /* Ensures it stays above other elements */
+}
+
+.holder {
+    width: 1200px;
+    min-height: 900px;
+    height: auto;
+    padding: 130px 90px 70px 90px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-y: scroll;
+    /*background-color: var(--bs-body-bg);*/
+    background-color: rgba(255, 254, 252, 0.85)
+}
+
+.container {
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 45px;
+}
+
+#flexedcont {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#headliner {
+    width: 390px;
+}
+
+#name {
+    width: 250px;
+    display: inline;
+}
