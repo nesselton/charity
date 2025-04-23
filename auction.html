@@ -61,42 +61,7 @@
                 </p>
             </div>
         </div>
-        <form id="jeongseon-form">
-            <input type="text" name="name" placeholder="Enter name" required>
-            <button type="submit">Submit</button>
-        </form>
-        <script>
-            const name = document.querySelector('#jeongseon-form input[name="name"]').value;
-
-
-            document.getElementById('jeongseon-form').addEventListener('submit', e => {
-                e.preventDefault();
-                const name = document.querySelector('#jeongseon-form input[name="name"]').value;
-
-                const data = {
-                    sheet: "jeongseon",
-                    name: name
-                };
-
-                fetch('https://script.google.com/macros/s/AKfycbxACgnitRdoUG5mzQfrE5Jb_uoT1a3wDS-LoZ3U941JjLjewIwYXk8iFCQwUixwcaCh/exec', {
-                    method: 'POST',
-                    body: JSON.stringify(data),
-                    headers: { 'Content-Type': 'application/json' }
-                })
-                    .then(() => {
-                        alert('Submitted to Jeongseon!');
-                        e.target.reset();
-                    })
-                    .catch(err => {
-                        console.error('Submission failed', err);
-                        alert('There was an error. Please try again.');
-                    });
-            });
-
-        </script>
-        <iframe
-            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQnQjobZYlGqudhD0NPpG_xI1yrogm8TKGL7NLelPjzoqcCpC5k3o3NBrJycFXbbO11AB4qDYWeWyXf/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false"></iframe>
-
+        
         <div class="container" id="flexedcont">
 
             <div class="fancy_graphics"
