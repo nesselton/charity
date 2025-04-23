@@ -61,6 +61,41 @@
                 </p>
             </div>
         </div>
+        <form id="jeongseon-form">
+            <input type="text" name="name" placeholder="Enter name" required>
+            <button type="submit">Submit</button>
+        </form>
+        <script>
+            const name = document.querySelector('#jeongseon-form input[name="name"]').value;
+
+
+            document.getElementById('jeongseon-form').addEventListener('submit', e => {
+                e.preventDefault();
+                const name = document.querySelector('#jeongseon-form input[name="name"]').value;
+
+                const data = {
+                    sheet: "jeongseon",
+                    name: name
+                };
+
+                fetch('https://script.google.com/macros/s/AKfycbxACgnitRdoUG5mzQfrE5Jb_uoT1a3wDS-LoZ3U941JjLjewIwYXk8iFCQwUixwcaCh/exec', {
+                    method: 'POST',
+                    body: JSON.stringify(data),
+                    headers: { 'Content-Type': 'application/json' }
+                })
+                    .then(() => {
+                        alert('Submitted to Jeongseon!');
+                        e.target.reset();
+                    })
+                    .catch(err => {
+                        console.error('Submission failed', err);
+                        alert('There was an error. Please try again.');
+                    });
+            });
+
+        </script>
+        <iframe
+            src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQnQjobZYlGqudhD0NPpG_xI1yrogm8TKGL7NLelPjzoqcCpC5k3o3NBrJycFXbbO11AB4qDYWeWyXf/pubhtml?gid=0&amp;single=true&amp;widget=false&amp;headers=false"></iframe>
 
         <div class="container" id="flexedcont">
 
@@ -73,6 +108,36 @@
                 <p>
                     Pierre Auguste Renoir (undated), Oil on Canvas<br>
                     <em>donated from the Samsung Kim family's private collection</em>
+                </p>
+            </div>
+        </div>
+
+        <div class="container" id="flexedcont">
+
+            <div class="fancy_graphics"
+                style="background-image: url('https://media.cnn.com/api/v1/images/stellar/prod/210721143525-05-lee-collection-samsung.jpg?q=w_1160,c_fill/f_webp');">
+            </div>
+
+            <div id="headliner">
+                <h2>Women and Jars</h2>
+                <p>
+                    Kim Hwanki (1950s), Oil on Canvas<br>
+                    <em>donated from the Samsung Kim family's private collection</em>
+                </p>
+            </div>
+        </div>
+
+        <div class="container" id="flexedcont">
+
+            <div class="fancy_graphics"
+                style="background-image: url('https://i.pinimg.com/736x/d2/f7/c4/d2f7c4969c9c459fd8980405efcaa92e.jpg');">
+            </div>
+
+            <div id="headliner">
+                <h2>My Mountains in Summer</h2>
+                <p>
+                    Shim Haemin (2025), Coloured Pencil on Paper <br>
+                    <em>donated by Seoul Boulevards School</em>
                 </p>
             </div>
         </div>
@@ -95,13 +160,13 @@
         <div class="container" id="flexedcont">
 
             <div class="fancy_graphics"
-                style="background-image: url('https://i.pinimg.com/736x/d2/f7/c4/d2f7c4969c9c459fd8980405efcaa92e.jpg');">
+                style="background-image: url('https://i.pinimg.com/736x/a8/24/7e/a8247ee6d55da71f6263df99341e07ab.jpg');">
             </div>
 
             <div id="headliner">
-                <h2>My Mountains in Summer</h2>
+                <h2>The Title</h2>
                 <p>
-                    Shim Haemin (2025), Coloured Pencil on Paper <br>
+                    LAST FIRST (2025), Coloured Pencil on Paper <br>
                     <em>donated by Seoul Boulevards School</em>
                 </p>
             </div>

@@ -33,7 +33,7 @@ body {
     margin-right: auto;
     overflow-y: scroll;
     /*background-color: var(--bs-body-bg);*/
-    background-color: rgba(255, 254, 252, 0.85)
+    background-color: rgba(255, 254, 252, 0.88)
 }
 
 .container {
